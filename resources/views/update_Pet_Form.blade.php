@@ -18,8 +18,10 @@
     @include('layouts.header')
 
     <main>
-      <form action="/add" id="add-pet-form" class="container" method="post" enctype="multipart/form-data">
+      <form action="/updatePF" id="add-pet-form" class="container" method="post" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="usernameh" value="{{ $username }}">
+        <input type="hidden" name="nicknameh" value="{{ $nickname }}">
         <div id="pet-details">
           <div class="form-group">
             <label for="type">Type</label>
@@ -145,7 +147,7 @@
       </div>
 
         <button type="submit" id="submit" class="btn btn-success">
-          Submit
+          Update
         </button>
       </form>
     </main>

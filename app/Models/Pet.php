@@ -10,9 +10,10 @@ class Pet extends Model
     use HasFactory;
     
     #protected $table = "pets";
+    protected $table = "pets";
     public $timestamps = false;
 
-    protected $fillable = ['owner_id', 'type', 'breed', 'nickname', 'age', 'gender', 'group', 'price', 'owner_msg', 'training', 'vaccination', 'behaviour'];
+    protected $fillable = ['owner_id', 'type', 'breed', 'nickname', 'age', 'gender', 'group', 'price', 'owner_msg', 'training', 'vaccination', 'behaviour','image_path'];
 
     public function owner(){
         // return $this->belongsTo('App\Owner', 'owner_id');

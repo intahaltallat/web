@@ -22,23 +22,23 @@
 
     <main>
         <div class="container mt-5">
-            <form action="/loginsession" method="post">
+            <form action="/updateUser" method="post">
                 @csrf
-                <h2 class="mb-4">LOGIN</h2>
-    
-                <div class="form-group">
-                    <label for="username">User Name:</label>
-                    <input type="text" class="form-control" id="username" name="name" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
+                <h2 class="mb-4">Update PET</h2>
 
-                <p id="demo"></p>
-    
-                <button type="submit" class="btn btn-success">LOGIN</button>
+                <input type="hidden" name="usernameh" value="{{ $username }}">
+
+                <div class="form-group">
+                    <label for="name">User Name:</label>
+                    <input type="text" class="form-control" id="username" name="username" value="{{$username}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Email:</label>
+                    <input type="text" class="form-control" id="email" name="email"  required>
+                </div>
+                
+
+                <button type="submit" class="btn btn-success">Update</button>
             </form>
         </div>
 

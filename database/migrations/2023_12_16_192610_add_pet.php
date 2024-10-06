@@ -27,6 +27,7 @@ class AddPet extends Migration
             $table->string('training');
             $table->string('vaccination');
             $table->string('behaviour');
+            $table->string('image_path')->nullable();
             // $table->foreignId('owner_id')->constrained('owners');
             $table->foreign('owner_id')->references('id')->on('owners')->onDelete('cascade');
             $table->timestamps();

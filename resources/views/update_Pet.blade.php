@@ -22,23 +22,20 @@
 
     <main>
         <div class="container mt-5">
-            <form action="/loginsession" method="post">
+            <form action="/updateP" method="post">
                 @csrf
-                <h2 class="mb-4">LOGIN</h2>
+                <h2 class="mb-4">Update PET</h2>
     
                 <div class="form-group">
-                    <label for="username">User Name:</label>
-                    <input type="text" class="form-control" id="username" name="name" required>
+                    <label for="name">User Name:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
                 </div>
-    
                 <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
+                    <label for="name">Pet NickName:</label>
+                    <input type="text" class="form-control" id="nickname" name="nickname" required>
                 </div>
-
-                <p id="demo"></p>
     
-                <button type="submit" class="btn btn-success">LOGIN</button>
+                <button type="submit" class="btn btn-success">Update</button>
             </form>
         </div>
 
